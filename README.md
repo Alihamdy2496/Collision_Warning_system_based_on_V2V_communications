@@ -10,9 +10,9 @@
 * System Components: **AUTOSAR** Layered Architecture, **FreeRTOS**, **ARM** Cortex TM4C123G,
   **WIFI** module, **GPS** module, Six ultrasonics sensors, Camera and Speed sensor
 * Handling the Collision scenarios:
-  1-Emergency Electronics Brake Lights (EEBL)
-  2-Blind Spot Warning (BSW)
-  3-Don’t Pass Warning (DNPW)
+  1. Emergency Electronics Brake Lights (EEBL)
+  2. Blind Spot Warning (BSW)
+  3. Don’t Pass Warning (DNPW)
 * Sponsored by ![](./files/Valeo_Logo.png)
 
 ---
