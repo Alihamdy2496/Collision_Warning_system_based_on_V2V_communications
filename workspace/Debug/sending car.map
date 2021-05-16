@@ -1,0 +1,872 @@
+******************************************************************************
+                  TI ARM Linker Unix v20.2.1                   
+******************************************************************************
+>> Linked Sun May 16 11:16:17 2021
+
+OUTPUT FILE NAME:   <sending car.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00009e29
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  0000a394  00035c6c  R  X
+  SRAM                  20000000   00008000  000067e2  0000181e  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    0000a398   0000a398    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00009d00   00009d00    r-x .text
+  00009f70    00009f70    000003d8   000003d8    r-- .const
+  0000a348    0000a348    00000050   00000050    r-- .cinit
+20000000    20000000    000067e8   00000000    rw-
+  20000000    20000000    0000554a   00000000    rw- .bss
+  20005550    20005550    00001098   00000000    rw- .data
+  200065e8    200065e8    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c1231h6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    00009d00     
+                  0000026c    00001b8c     main.obj (.text)
+                  00001df8    000019ac     tasks.obj (.text)
+                  000037a4    00000a94     HAL_WIFI.obj (.text)
+                  00004238    00000a18     Service_WIFI.obj (.text)
+                  00004c50    00000818     GPIO_Driver.obj (.text)
+                  00005468    0000074c     lcd_8mode1.obj (.text)
+                  00005bb4    00000738     rtsv7M4_T_le_v4SPD16_eabi.lib : k_rem_pio2.c.obj (.text:__kernel_rem_pio2)
+                  000062ec    000005dc                                   : s_cos.c.obj (.text:cos)
+                  000068c8    000005c4                                   : s_sin.c.obj (.text:sin)
+                  00006e8c    00000490     Ultrasoinc_2.obj (.text)
+                  0000731c    00000484     gps.obj (.text)
+                  000077a0    00000460     rtsv7M4_T_le_v4SPD16_eabi.lib : strtod.c.obj (.text:strtod)
+                  00007c00    000002ec                                   : s_atan.c.obj (.text:atan)
+                  00007eec    00000214     UART.obj (.text)
+                  00008100    000001d8     rtsv7M4_T_le_v4SPD16_eabi.lib : e_atan2.c.obj (.text:atan2)
+                  000082d8    000001b8     heap_2.obj (.text)
+                  00008490    000001b8     port.obj (.text)
+                  00008648    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.asm.obj (.text)
+                  000087fe    00000002     --HOLE-- [fill = 0]
+                  00008800    0000017c     PWM.obj (.text)
+                  0000897c    00000174     rtsv7M4_T_le_v4SPD16_eabi.lib : k_sin.c.obj (.text:__kernel_sin)
+                  00008af0    0000016c                                   : k_cos.c.obj (.text:__kernel_cos)
+                  00008c5c    00000158                                   : e_sqrt.c.obj (.text:sqrt)
+                  00008db4    0000014c     UART3.obj (.text)
+                  00008f00    00000136     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_div_t2.asm.obj (.text)
+                  00009036    00000002     --HOLE-- [fill = 0]
+                  00009038    00000134     uart2.obj (.text)
+                  0000916c    00000132     list.obj (.text)
+                  0000929e    00000002     --HOLE-- [fill = 0]
+                  000092a0    00000110     rtsv7M4_T_le_v4SPD16_eabi.lib : s_scalbn.c.obj (.text:scalbn)
+                  000093b0    00000108     UART7.obj (.text)
+                  000094b8    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.asm.obj (.text)
+                  000095b4    000000f8                                   : s_floor.c.obj (.text:floor)
+                  000096ac    000000dc     motors.obj (.text)
+                  00009788    000000d2     portasm.obj (.text)
+                  0000985a    00000002     --HOLE-- [fill = 0]
+                  0000985c    000000d0     Speed.obj (.text)
+                  0000992c    000000a0     Timer1.obj (.text)
+                  000099cc    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  00009a68    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdcmple)
+                  00009aee    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
+                  00009b74    0000007c     PLL.obj (.text)
+                  00009bf0    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.asm.obj (.text)
+                  00009c6a    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00009cd2    00000002     --HOLE-- [fill = 0]
+                  00009cd4    0000004c                                   : atoi.c.obj (.text:atoi)
+                  00009d20    00000048                                   : fd_toi_t2.asm.obj (.text)
+                  00009d68    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00009dac    00000044                                   : fd_tou_t2.asm.obj (.text)
+                  00009df0    00000038                                   : fs_tod_t2.asm.obj (.text)
+                  00009e28    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00009e5c    0000002e                                   : i_tofd_t2.asm.obj (.text)
+                  00009e8a    00000020                                   : u_tofd_t2.asm.obj (.text)
+                  00009eaa    0000001e                                   : strcat.c.obj (.text:strcat)
+                  00009ec8    0000001a                                   : s_copysign.c.obj (.text:copysign)
+                  00009ee2    00000018                                   : strcmp.c.obj (.text:strcmp)
+                  00009efa    00000014                                   : strcpy.c.obj (.text:strcpy)
+                  00009f0e    00000014                                   : strlen.c.obj (.text:strlen)
+                  00009f22    00000012                                   : atof.c.obj (.text:atof)
+                  00009f34    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00009f42    0000000c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00009f4e    0000000c     tm4c1231h6pm_startup_ccs.obj (.text)
+                  00009f5a    00000002     --HOLE-- [fill = 0]
+                  00009f5c    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.text:__aeabi_errno_addr)
+                  00009f64    00000004                                   : pre_init.c.obj (.text:_system_pre_init)
+                  00009f68    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.const     0    00009f70    000003d8     
+                  00009f70    00000158     rtsv7M4_T_le_v4SPD16_eabi.lib : k_rem_pio2.c.obj (.const:$O1$$)
+                  0000a0c8    00000101                                   : ctype.c.obj (.const:.string:_ctypes_)
+                  0000a1c9    00000004     lcd_8mode1.obj (.const:.string:$P$T0$1)
+                  0000a1cd    00000003     --HOLE-- [fill = 0]
+                  0000a1d0    000000c8     rtsv7M4_T_le_v4SPD16_eabi.lib : strtod.c.obj (.const:$O1$$)
+                  0000a298    00000098                                   : s_atan.c.obj (.const:$O1$$)
+                  0000a330    00000010     main.obj (.const:$P$T0$1)
+                  0000a340    00000008     port.obj (.const)
+
+.cinit     0    0000a348    00000050     
+                  0000a348    00000028     (.cinit..data.load) [load image, compression = lzss]
+                  0000a370    0000000c     (__TI_handler_table)
+                  0000a37c    00000004     --HOLE-- [fill = 0]
+                  0000a380    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000a388    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss       0    20000000    0000554a     UNINITIALIZED
+                  20000000    00004e20     heap_2.obj (.bss:ucHeap)
+                  20004e20    00000488     (.common:DATA)
+                  200052a8    00000190     (.common:APs)
+                  20005438    00000064     tasks.obj (.bss:pxReadyTasksLists)
+                  2000549c    00000018     (.common:Ultrasonic_readings)
+                  200054b4    00000014     tasks.obj (.bss:xDelayedTaskList1)
+                  200054c8    00000014     tasks.obj (.bss:xDelayedTaskList2)
+                  200054dc    00000014     tasks.obj (.bss:xPendingReadyList)
+                  200054f0    00000014     tasks.obj (.bss:xSuspendedTaskList)
+                  20005504    00000014     tasks.obj (.bss:xTasksWaitingTermination)
+                  20005518    00000008     tasks.obj (.bss)
+                  20005520    00000008     heap_2.obj (.bss:xEnd)
+                  20005528    00000008     heap_2.obj (.bss:xStart)
+                  20005530    00000004     Speed.obj (.bss)
+                  20005534    00000004     Timer1.obj (.bss)
+                  20005538    00000004     Ultrasoinc_2.obj (.bss)
+                  2000553c    00000004     uart2.obj (.bss)
+                  20005540    00000004     (.common:GPS_handle)
+                  20005544    00000002     main.obj (.bss)
+                  20005546    00000002     (.common:time1)
+                  20005548    00000002     (.common:time2)
+
+.data      0    20005550    00001098     UNINITIALIZED
+                  20005550    0000044c     main.obj (.data:FDATA)
+                  2000599c    00000400     HAL_WIFI.obj (.data:receive_Buffer)
+                  20005d9c    00000400     HAL_WIFI.obj (.data:wait_Buffer)
+                  2000619c    00000004     main.obj (.data:APPs_coll)
+                  200061a0    00000280     main.obj (.data:Applications_data)
+                  20006420    00000096     gps.obj (.data:frame)
+                  200064b6    00000064     HAL_WIFI.obj (.data:send_Buffer)
+                  2000651a    00000037     main.obj (.data:THIS_CAR_DATA)
+                  20006551    00000003     --HOLE--
+                  20006554    00000034     tasks.obj (.data)
+                  20006588    00000024     main.obj (.data)
+                  200065ac    0000000c     port.obj (.data)
+                  200065b8    0000000c     main.obj (.data:us_order)
+                  200065c4    00000009     gps.obj (.data:comma_Location)
+                  200065cd    00000003     --HOLE--
+                  200065d0    00000008     heap_2.obj (.data)
+                  200065d8    00000006     Ultrasoinc_2.obj (.data)
+                  200065de    00000006     main.obj (.data:coll)
+                  200065e4    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.data)
+
+.stack     0    200065e8    00000200     UNINITIALIZED
+                  200065e8    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  200065ec    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    ./
+       heap_2.obj                     440     0         20024  
+       main.obj                       7052    16        1887   
+       tasks.obj                      6572    0         260    
+       HAL_WIFI.obj                   2708    0         2148   
+       Service_WIFI.obj               2584    0         1560   
+       GPIO_Driver.obj                2072    0         0      
+       lcd_8mode1.obj                 1868    4         0      
+       gps.obj                        1156    0         159    
+       Ultrasoinc_2.obj               1168    0         10     
+       tm4c1231h6pm_startup_ccs.obj   12      620       0      
+       UART.obj                       532     0         0      
+       port.obj                       440     8         12     
+       PWM.obj                        380     0         0      
+       UART3.obj                      332     0         0      
+       uart2.obj                      308     0         4      
+       list.obj                       306     0         0      
+       UART7.obj                      264     0         0      
+       motors.obj                     220     0         0      
+       Speed.obj                      208     0         4      
+       portasm.obj                    210     0         0      
+       Timer1.obj                     160     0         4      
+       PLL.obj                        124     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         29116   648       26072  
+                                                               
+    /home/ali/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib
+       k_rem_pio2.c.obj               1848    344       0      
+       s_cos.c.obj                    1500    0         0      
+       s_sin.c.obj                    1476    0         0      
+       strtod.c.obj                   1120    200       0      
+       s_atan.c.obj                   748     152       0      
+       e_atan2.c.obj                  472     0         0      
+       fd_add_t2.asm.obj              438     0         0      
+       k_sin.c.obj                    372     0         0      
+       k_cos.c.obj                    364     0         0      
+       e_sqrt.c.obj                   344     0         0      
+       fd_div_t2.asm.obj              310     0         0      
+       s_scalbn.c.obj                 272     0         0      
+       fd_cmp_t2.asm.obj              268     0         0      
+       ctype.c.obj                    0       257       0      
+       fd_mul_t2.asm.obj              252     0         0      
+       s_floor.c.obj                  248     0         0      
+       memcpy_t2.asm.obj              156     0         0      
+       memset_t2.asm.obj              122     0         0      
+       copy_decompress_lzss.c.obj     104     0         0      
+       atoi.c.obj                     76      0         0      
+       fd_toi_t2.asm.obj              72      0         0      
+       autoinit.c.obj                 68      0         0      
+       fd_tou_t2.asm.obj              68      0         0      
+       fs_tod_t2.asm.obj              56      0         0      
+       boot_cortex_m.c.obj            52      0         0      
+       i_tofd_t2.asm.obj              46      0         0      
+       u_tofd_t2.asm.obj              32      0         0      
+       strcat.c.obj                   30      0         0      
+       s_copysign.c.obj               26      0         0      
+       strcmp.c.obj                   24      0         0      
+       strcpy.c.obj                   20      0         0      
+       strlen.c.obj                   20      0         0      
+       atof.c.obj                     18      0         0      
+       copy_decompress_none.c.obj     14      0         0      
+       copy_zero_init.c.obj           12      0         0      
+       errno.c.obj                    8       0         4      
+       exit.c.obj                     4       0         0      
+       pre_init.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         11064   953       4      
+                                                               
+       Stack:                         0       0         512    
+       Linker Generated:              0       76        0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   40180   1677      26588  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000a388 records: 2, size/record: 8, table size: 16
+	.data: load addr=0000a348, load size=00000028 bytes, run addr=20005550, run size=00001098 bytes, compression=lzss
+	.bss: load addr=0000a380, load size=00000008 bytes, run addr=20000000, run size=0000554a bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000a370 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                                              
+-------   ----                                                              
+200052a8  APs                                                               
+00003c8f  APs_CLEAR                                                         
+00000709  Applications_Detection                                            
+200065a7  Applications_Detection_checker                                    
+200065a0  Applications_Detection_handle                                     
+200061a0  Applications_data                                                 
+20006589  BSW_state                                                         
+200065a4  Bluetooth_reading                                                 
+00009f69  C$$EXIT                                                           
+00006f9f  Captureinit                                                       
+00006fd3  Configure_Echo                                                    
+00009867  Configure_Speed_pin                                               
+00006ecf  Configure_Trigger                                                 
+20004e20  DATA                                                              
+2000658c  DNPW_state                                                        
+00005403  Delay_ms                                                          
+00006e8d  Delay_us                                                          
+000096ad  Direction                                                         
+000098eb  Disable_Speed_Interrupt                                           
+000071d3  Disable_Ultrasionc_Interrupts                                     
+00007571  Distance                                                          
+2000658a  EEBL_state                                                        
+00003fdd  ESP_END_CONNECTION_AT_STA_MODE                                    
+00004421  ESP_FDATA_CLEAR                                                   
+00004239  ESP_GET_OTHER_CARS_DATA                                           
+00003cfd  ESP_Join_AP__Command_sending                                      
+00003d75  ESP_Join_AP__Response_Recv                                        
+00003bcd  ESP_List_Nearby_APs__APs_recv                                     
+00003bb9  ESP_List_Nearby_APs__Command_sending                              
+00003dc7  ESP_Quit_AP                                                       
+0000414f  ESP_RECEIVE_BUFFER_CLEAR                                          
+00004051  ESP_RECEIVE_DATA_AT_SERVER_MODE                                   
+00003afd  ESP_SAP_AND_SERVER_Configuration                                  
+00003ec5  ESP_SEND_DATA_AT_STA_Mode                                         
+000044b5  ESP_SEND_THIS_CAR_DATA__CARS_LISTING__Command_Sending             
+000044f5  ESP_SEND_THIS_CAR_DATA__CARS_LISTING__Response_recv               
+0000460d  ESP_SEND_THIS_CAR_DATA___CONNECTING_TO_SINGLE_CAR__Command_sending
+000046db  ESP_SEND_THIS_CAR_DATA___CONNECTING_TO_SINGLE_CAR__Response_Recv  
+00004749  ESP_SEND_THIS_CAR_DATA___SENDING_TO_SINGLE_CAR                    
+00003e4d  ESP_START_CONNECTION_AT_STA_MODE                                  
+00003ba1  ESP_STA_Configuration                                             
+000037a5  ESP_Send_AT_Command_and_Receive_Response                          
+000039c1  ESP_init                                                          
+200065dc  Echo                                                              
+000098e1  Enable_Speed_Interrupt                                            
+000071cb  Enable_Ultrasionc_Interrupts                                      
+20005550  FDATA                                                             
+0000026d  GPS_Task                                                          
+20005540  GPS_handle                                                        
+2000658d  General_warning_state                                             
+0000972d  Motors_init                                                       
+00009b75  PLL_Init                                                          
+0000985d  PortFIntHandler                                                   
+20006590  Reading                                                           
+00009f4f  ResetISR                                                          
+000071ed  Send_Trigger                                                      
+0000164b  SpeedPinAction                                                    
+2000651a  THIS_CAR_DATA                                                     
+0000892b  Timer0A_PWM_Duty                                                  
+000088a1  Timer0A_PWM_Init                                                  
+0000888b  Timer0B_PWM_Duty                                                  
+00008801  Timer0B_PWM_Init                                                  
+0000992d  Timer1A_Init                                                      
+0000165f  TimerA1_Action                                                    
+00009997  TimerA1_Handler                                                   
+000072cb  TimerA2_Handler                                                   
+20006594  Trigger                                                           
+00005b6b  U32_POW                                                           
+00007eed  UART0_Init                                                        
+00008071  UART0_ReadChr                                                     
+00008085  UART0_ReadString                                                  
+00008055  UART0_SendChr                                                     
+00007fdb  UART0_SendInt                                                     
+00007fb7  UART0_SendString                                                  
+000016b1  UART2_Action                                                      
+00009065  UART2_Handler                                                     
+000090e1  UART2_InChar                                                      
+000090f5  UART2_OutChar                                                     
+00009111  UART2_OutString                                                   
+0000904f  UART2_interrupt_disable                                           
+00009039  UART2_interrupt_enable                                            
+00008db5  UART3_INIT                                                        
+00008e8b  UART3_receiveString                                               
+00008e3b  UART3_recieveByte                                                 
+00008e1f  UART3_sendByte                                                    
+00008e5b  UART3_sendString                                                  
+000041cd  UART7_Handler                                                     
+00009435  UART7_InChar                                                      
+00009449  UART7_OutChar                                                     
+00009465  UART7_OutString                                                   
+00000289  Ultrasonic_1_Reading                                              
+20006598  Ultrasonic_1_ReadingHandle                                        
+2000549c  Ultrasonic_readings                                               
+00005a85  Void_Clear_Screen                                                 
+00004c51  Void_Clock_Activator                                              
+00004e63  Void_Digital_Enable                                               
+00004cc5  Void_Direction                                                    
+00005469  Void_LCD_CMD                                                      
+0000572d  Void_LCD_DATA                                                     
+0000588f  Void_LCD_INIT                                                     
+0000597d  Void_LCD_Location                                                 
+000059d7  Void_LCD_NUM                                                      
+000059a7  Void_LCD_Print                                                    
+000052d5  Void_PUR                                                          
+00004ee7  Void_Pin_Digital_Enable                                           
+00004d31  Void_Pin_Direction                                                
+00005359  Void_Pin_PUR                                                      
+000051c9  Void_Read_Pin                                                     
+0000500d  Void_Read_Port                                                    
+000055cb  Void_Send_Init_SEQ                                                
+000053f5  Void_Unlock_PF0                                                   
+00005a8f  Void_Wait_Busy_Flag                                               
+00004f89  Void_Wrie_Port                                                    
+00005081  Void_Write_Pin                                                    
+00000bc5  WIFI_Frame_Send                                                   
+200065a6  WIFI_Frame_Send_Counter                                           
+200065a5  WIFI_Frame_Send_checker                                           
+2000659c  WIFI_Frame_Send_handle                                            
+200065aa  WIFI_LISTING                                                      
+200067e8  __STACK_END                                                       
+00000200  __STACK_SIZE                                                      
+200067e8  __STACK_TOP                                                       
+0000a388  __TI_CINIT_Base                                                   
+0000a398  __TI_CINIT_Limit                                                  
+0000a370  __TI_Handler_Table_Base                                           
+0000a37c  __TI_Handler_Table_Limit                                          
+00009d69  __TI_auto_init_nobinit_nopinit                                    
+00009c6b  __TI_decompress_lzss                                              
+00009f35  __TI_decompress_none                                              
+ffffffff  __TI_pprof_out_hndl                                               
+ffffffff  __TI_prof_data_size                                               
+ffffffff  __TI_prof_data_start                                              
+00000000  __TI_static_base__                                                
+00009f43  __TI_zero_init                                                    
+00009a69  __aeabi_cdcmpeq                                                   
+00009a69  __aeabi_cdcmple                                                   
+00009aef  __aeabi_cdrcmple                                                  
+00009d21  __aeabi_d2iz                                                      
+00009dad  __aeabi_d2uiz                                                     
+00008653  __aeabi_dadd                                                      
+00008f01  __aeabi_ddiv                                                      
+000094b9  __aeabi_dmul                                                      
+00008649  __aeabi_dsub                                                      
+00009f5d  __aeabi_errno_addr                                                
+00009df1  __aeabi_f2d                                                       
+00009e5d  __aeabi_i2d                                                       
+00009bf1  __aeabi_memclr                                                    
+00009bf1  __aeabi_memclr4                                                   
+00009bf1  __aeabi_memclr8                                                   
+000099cd  __aeabi_memcpy                                                    
+000099cd  __aeabi_memcpy4                                                   
+000099cd  __aeabi_memcpy8                                                   
+00009bf3  __aeabi_memset                                                    
+00009bf3  __aeabi_memset4                                                   
+00009bf3  __aeabi_memset8                                                   
+00009e8b  __aeabi_ui2d                                                      
+ffffffff  __binit__                                                         
+ffffffff  __c_args__                                                        
+00008af1  __kernel_cos                                                      
+00005bb5  __kernel_rem_pio2                                                 
+0000897d  __kernel_sin                                                      
+UNDEFED   __mpu_init                                                        
+200065e8  __stack                                                           
+20000000  __start___llvm_prf_cnts                                           
+20000000  __stop___llvm_prf_cnts                                            
+00009e29  _c_int00_noargs                                                   
+0000a0c8  _ctypes_                                                          
+UNDEFED   _system_post_cinit                                                
+00009f65  _system_pre_init                                                  
+00009f69  abort                                                             
+00007c01  atan                                                              
+00008101  atan2                                                             
+00008101  atan2l                                                            
+00007c01  atanl                                                             
+00009f23  atof                                                              
+00009cd5  atoi                                                              
+ffffffff  binit                                                             
+200065c4  comma_Location                                                    
+00006f85  configure_callback                                                
+00009ec9  copysign                                                          
+00009ec9  copysignl                                                         
+000062ed  cos                                                               
+000062ed  cosl                                                              
+00007511  deg2rad                                                           
+00002175  eTaskGetState                                                     
+200065e4  errno                                                             
+000095b5  floor                                                             
+000095b5  floorl                                                            
+20006420  frame                                                             
+00000000  g_pfnVectors                                                      
+0000738d  get_Buffer                                                        
+0000731d  get_location                                                      
+00006f95  inputInt                                                          
+000092a1  ldexp                                                             
+000092a1  ldexpl                                                            
+00000d55  main                                                              
+000099cd  memcpy                                                            
+00009bf9  memset                                                            
+00002739  pcTaskGetName                                                     
+2000658b  potentail_EEBL_state                                              
+200065ab  print                                                             
+200065d8  pulse                                                             
+000082d9  pvPortMalloc                                                      
+00003293  pvTaskIncrementMutexHeldCount                                     
+20006554  pxCurrentTCB                                                      
+00008491  pxPortInitialiseStack                                             
+0000753b  rad2deg                                                           
+000092a1  scalbn                                                            
+000092a1  scalbnl                                                           
+000068c9  sin                                                               
+000068c9  sinl                                                              
+00008c5d  sqrt                                                              
+00008c5d  sqrtl                                                             
+00009eab  strcat                                                            
+00009ee3  strcmp                                                            
+00009efb  strcpy                                                            
+00009f0f  strlen                                                            
+000077a1  strtod                                                            
+000077a1  strtold                                                           
+20005546  time1                                                             
+20005548  time2                                                             
+0000906f  uart2_init                                                        
+000093b1  uart7_init                                                        
+0000941f  uart7_interrupt_disable                                           
+00009409  uart7_interrupt_enable                                            
+0000a340  ulMaxSyscallInterruptPriority                                     
+00009799  ulPortGetIPSR                                                     
+000032ab  ulTaskNotifyTake                                                  
+00000f91  ultrasonic_action                                                 
+200065b8  us_order                                                          
+00009257  uxListRemove                                                      
+00002733  uxTaskGetNumberOfTasks                                            
+00003085  uxTaskGetStackHighWaterMark                                       
+000028b9  uxTaskGetSystemState                                              
+00002ded  uxTaskGetTaskNumber                                               
+00002205  uxTaskPriorityGet                                                 
+00002235  uxTaskPriorityGetFromISR                                          
+0000326d  uxTaskResetEventItemValue                                         
+0000916d  vListInitialise                                                   
+0000919d  vListInitialiseItem                                               
+000091e9  vListInsert                                                       
+000091ad  vListInsertEnd                                                    
+0000984d  vPortEnableVFP                                                    
+0000858f  vPortEndScheduler                                                 
+00008591  vPortEnterCritical                                                
+000085b1  vPortExitCritical                                                 
+000083d1  vPortFree                                                         
+00008435  vPortInitialiseBlocks                                             
+00009811  vPortSVCHandler                                                   
+000085ed  vPortSetupTimerInterrupt                                          
+00009831  vPortStartFirstTask                                               
+000085fb  vPortValidateInterruptPriority                                    
+00002137  vTaskDelay                                                        
+00002089  vTaskDelayUntil                                                   
+00001ffd  vTaskDelete                                                       
+000025d1  vTaskEndScheduler                                                 
+00002f01  vTaskGetInfo                                                      
+00002de5  vTaskMissedYield                                                  
+000035ed  vTaskNotifyGiveFromISR                                            
+00002bbb  vTaskPlaceOnEventList                                             
+00002bdb  vTaskPlaceOnUnorderedEventList                                    
+00003159  vTaskPriorityInherit                                              
+00002289  vTaskPrioritySet                                                  
+0000246b  vTaskResume                                                       
+00002e0d  vTaskSetTaskNumber                                                
+00002d25  vTaskSetTimeOutState                                              
+00002581  vTaskStartScheduler                                               
+0000238d  vTaskSuspend                                                      
+000025f1  vTaskSuspendAll                                                   
+00002b35  vTaskSwitchContext                                                
+2000658e  x                                                                 
+0000842f  xPortGetFreeHeapSize                                              
+000097b1  xPortPendSVHandler                                                
+000084fb  xPortStartScheduler                                               
+000085c7  xPortSysTickHandler                                               
+0000299d  xTaskAbortDelay                                                   
+00002d3f  xTaskCheckForTimeOut                                              
+00001df9  xTaskCreate                                                       
+000033e9  xTaskGenericNotify                                                
+000034d5  xTaskGenericNotifyFromISR                                         
+000030fb  xTaskGetCurrentTaskHandle                                         
+00002831  xTaskGetHandle                                                    
+00002991  xTaskGetIdleTaskHandle                                            
+00003129  xTaskGetSchedulerState                                            
+000026ed  xTaskGetTickCount                                                 
+00002705  xTaskGetTickCountFromISR                                          
+00002a23  xTaskIncrementTick                                                
+000036a3  xTaskNotifyStateClear                                             
+00003331  xTaskNotifyWait                                                   
+000031f3  xTaskPriorityDisinherit                                           
+00002c11  xTaskRemoveFromEventList                                          
+00002ca1  xTaskRemoveFromUnorderedEventList                                 
+00002605  xTaskResumeAll                                                    
+000024ed  xTaskResumeFromISR                                                
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                                              
+-------   ----                                                              
+00000000  __TI_static_base__                                                
+00000000  g_pfnVectors                                                      
+00000200  __STACK_SIZE                                                      
+0000026d  GPS_Task                                                          
+00000289  Ultrasonic_1_Reading                                              
+00000709  Applications_Detection                                            
+00000bc5  WIFI_Frame_Send                                                   
+00000d55  main                                                              
+00000f91  ultrasonic_action                                                 
+0000164b  SpeedPinAction                                                    
+0000165f  TimerA1_Action                                                    
+000016b1  UART2_Action                                                      
+00001df9  xTaskCreate                                                       
+00001ffd  vTaskDelete                                                       
+00002089  vTaskDelayUntil                                                   
+00002137  vTaskDelay                                                        
+00002175  eTaskGetState                                                     
+00002205  uxTaskPriorityGet                                                 
+00002235  uxTaskPriorityGetFromISR                                          
+00002289  vTaskPrioritySet                                                  
+0000238d  vTaskSuspend                                                      
+0000246b  vTaskResume                                                       
+000024ed  xTaskResumeFromISR                                                
+00002581  vTaskStartScheduler                                               
+000025d1  vTaskEndScheduler                                                 
+000025f1  vTaskSuspendAll                                                   
+00002605  xTaskResumeAll                                                    
+000026ed  xTaskGetTickCount                                                 
+00002705  xTaskGetTickCountFromISR                                          
+00002733  uxTaskGetNumberOfTasks                                            
+00002739  pcTaskGetName                                                     
+00002831  xTaskGetHandle                                                    
+000028b9  uxTaskGetSystemState                                              
+00002991  xTaskGetIdleTaskHandle                                            
+0000299d  xTaskAbortDelay                                                   
+00002a23  xTaskIncrementTick                                                
+00002b35  vTaskSwitchContext                                                
+00002bbb  vTaskPlaceOnEventList                                             
+00002bdb  vTaskPlaceOnUnorderedEventList                                    
+00002c11  xTaskRemoveFromEventList                                          
+00002ca1  xTaskRemoveFromUnorderedEventList                                 
+00002d25  vTaskSetTimeOutState                                              
+00002d3f  xTaskCheckForTimeOut                                              
+00002de5  vTaskMissedYield                                                  
+00002ded  uxTaskGetTaskNumber                                               
+00002e0d  vTaskSetTaskNumber                                                
+00002f01  vTaskGetInfo                                                      
+00003085  uxTaskGetStackHighWaterMark                                       
+000030fb  xTaskGetCurrentTaskHandle                                         
+00003129  xTaskGetSchedulerState                                            
+00003159  vTaskPriorityInherit                                              
+000031f3  xTaskPriorityDisinherit                                           
+0000326d  uxTaskResetEventItemValue                                         
+00003293  pvTaskIncrementMutexHeldCount                                     
+000032ab  ulTaskNotifyTake                                                  
+00003331  xTaskNotifyWait                                                   
+000033e9  xTaskGenericNotify                                                
+000034d5  xTaskGenericNotifyFromISR                                         
+000035ed  vTaskNotifyGiveFromISR                                            
+000036a3  xTaskNotifyStateClear                                             
+000037a5  ESP_Send_AT_Command_and_Receive_Response                          
+000039c1  ESP_init                                                          
+00003afd  ESP_SAP_AND_SERVER_Configuration                                  
+00003ba1  ESP_STA_Configuration                                             
+00003bb9  ESP_List_Nearby_APs__Command_sending                              
+00003bcd  ESP_List_Nearby_APs__APs_recv                                     
+00003c8f  APs_CLEAR                                                         
+00003cfd  ESP_Join_AP__Command_sending                                      
+00003d75  ESP_Join_AP__Response_Recv                                        
+00003dc7  ESP_Quit_AP                                                       
+00003e4d  ESP_START_CONNECTION_AT_STA_MODE                                  
+00003ec5  ESP_SEND_DATA_AT_STA_Mode                                         
+00003fdd  ESP_END_CONNECTION_AT_STA_MODE                                    
+00004051  ESP_RECEIVE_DATA_AT_SERVER_MODE                                   
+0000414f  ESP_RECEIVE_BUFFER_CLEAR                                          
+000041cd  UART7_Handler                                                     
+00004239  ESP_GET_OTHER_CARS_DATA                                           
+00004421  ESP_FDATA_CLEAR                                                   
+000044b5  ESP_SEND_THIS_CAR_DATA__CARS_LISTING__Command_Sending             
+000044f5  ESP_SEND_THIS_CAR_DATA__CARS_LISTING__Response_recv               
+0000460d  ESP_SEND_THIS_CAR_DATA___CONNECTING_TO_SINGLE_CAR__Command_sending
+000046db  ESP_SEND_THIS_CAR_DATA___CONNECTING_TO_SINGLE_CAR__Response_Recv  
+00004749  ESP_SEND_THIS_CAR_DATA___SENDING_TO_SINGLE_CAR                    
+00004c51  Void_Clock_Activator                                              
+00004cc5  Void_Direction                                                    
+00004d31  Void_Pin_Direction                                                
+00004e63  Void_Digital_Enable                                               
+00004ee7  Void_Pin_Digital_Enable                                           
+00004f89  Void_Wrie_Port                                                    
+0000500d  Void_Read_Port                                                    
+00005081  Void_Write_Pin                                                    
+000051c9  Void_Read_Pin                                                     
+000052d5  Void_PUR                                                          
+00005359  Void_Pin_PUR                                                      
+000053f5  Void_Unlock_PF0                                                   
+00005403  Delay_ms                                                          
+00005469  Void_LCD_CMD                                                      
+000055cb  Void_Send_Init_SEQ                                                
+0000572d  Void_LCD_DATA                                                     
+0000588f  Void_LCD_INIT                                                     
+0000597d  Void_LCD_Location                                                 
+000059a7  Void_LCD_Print                                                    
+000059d7  Void_LCD_NUM                                                      
+00005a85  Void_Clear_Screen                                                 
+00005a8f  Void_Wait_Busy_Flag                                               
+00005b6b  U32_POW                                                           
+00005bb5  __kernel_rem_pio2                                                 
+000062ed  cos                                                               
+000062ed  cosl                                                              
+000068c9  sin                                                               
+000068c9  sinl                                                              
+00006e8d  Delay_us                                                          
+00006ecf  Configure_Trigger                                                 
+00006f85  configure_callback                                                
+00006f95  inputInt                                                          
+00006f9f  Captureinit                                                       
+00006fd3  Configure_Echo                                                    
+000071cb  Enable_Ultrasionc_Interrupts                                      
+000071d3  Disable_Ultrasionc_Interrupts                                     
+000071ed  Send_Trigger                                                      
+000072cb  TimerA2_Handler                                                   
+0000731d  get_location                                                      
+0000738d  get_Buffer                                                        
+00007511  deg2rad                                                           
+0000753b  rad2deg                                                           
+00007571  Distance                                                          
+000077a1  strtod                                                            
+000077a1  strtold                                                           
+00007c01  atan                                                              
+00007c01  atanl                                                             
+00007eed  UART0_Init                                                        
+00007fb7  UART0_SendString                                                  
+00007fdb  UART0_SendInt                                                     
+00008055  UART0_SendChr                                                     
+00008071  UART0_ReadChr                                                     
+00008085  UART0_ReadString                                                  
+00008101  atan2                                                             
+00008101  atan2l                                                            
+000082d9  pvPortMalloc                                                      
+000083d1  vPortFree                                                         
+0000842f  xPortGetFreeHeapSize                                              
+00008435  vPortInitialiseBlocks                                             
+00008491  pxPortInitialiseStack                                             
+000084fb  xPortStartScheduler                                               
+0000858f  vPortEndScheduler                                                 
+00008591  vPortEnterCritical                                                
+000085b1  vPortExitCritical                                                 
+000085c7  xPortSysTickHandler                                               
+000085ed  vPortSetupTimerInterrupt                                          
+000085fb  vPortValidateInterruptPriority                                    
+00008649  __aeabi_dsub                                                      
+00008653  __aeabi_dadd                                                      
+00008801  Timer0B_PWM_Init                                                  
+0000888b  Timer0B_PWM_Duty                                                  
+000088a1  Timer0A_PWM_Init                                                  
+0000892b  Timer0A_PWM_Duty                                                  
+0000897d  __kernel_sin                                                      
+00008af1  __kernel_cos                                                      
+00008c5d  sqrt                                                              
+00008c5d  sqrtl                                                             
+00008db5  UART3_INIT                                                        
+00008e1f  UART3_sendByte                                                    
+00008e3b  UART3_recieveByte                                                 
+00008e5b  UART3_sendString                                                  
+00008e8b  UART3_receiveString                                               
+00008f01  __aeabi_ddiv                                                      
+00009039  UART2_interrupt_enable                                            
+0000904f  UART2_interrupt_disable                                           
+00009065  UART2_Handler                                                     
+0000906f  uart2_init                                                        
+000090e1  UART2_InChar                                                      
+000090f5  UART2_OutChar                                                     
+00009111  UART2_OutString                                                   
+0000916d  vListInitialise                                                   
+0000919d  vListInitialiseItem                                               
+000091ad  vListInsertEnd                                                    
+000091e9  vListInsert                                                       
+00009257  uxListRemove                                                      
+000092a1  ldexp                                                             
+000092a1  ldexpl                                                            
+000092a1  scalbn                                                            
+000092a1  scalbnl                                                           
+000093b1  uart7_init                                                        
+00009409  uart7_interrupt_enable                                            
+0000941f  uart7_interrupt_disable                                           
+00009435  UART7_InChar                                                      
+00009449  UART7_OutChar                                                     
+00009465  UART7_OutString                                                   
+000094b9  __aeabi_dmul                                                      
+000095b5  floor                                                             
+000095b5  floorl                                                            
+000096ad  Direction                                                         
+0000972d  Motors_init                                                       
+00009799  ulPortGetIPSR                                                     
+000097b1  xPortPendSVHandler                                                
+00009811  vPortSVCHandler                                                   
+00009831  vPortStartFirstTask                                               
+0000984d  vPortEnableVFP                                                    
+0000985d  PortFIntHandler                                                   
+00009867  Configure_Speed_pin                                               
+000098e1  Enable_Speed_Interrupt                                            
+000098eb  Disable_Speed_Interrupt                                           
+0000992d  Timer1A_Init                                                      
+00009997  TimerA1_Handler                                                   
+000099cd  __aeabi_memcpy                                                    
+000099cd  __aeabi_memcpy4                                                   
+000099cd  __aeabi_memcpy8                                                   
+000099cd  memcpy                                                            
+00009a69  __aeabi_cdcmpeq                                                   
+00009a69  __aeabi_cdcmple                                                   
+00009aef  __aeabi_cdrcmple                                                  
+00009b75  PLL_Init                                                          
+00009bf1  __aeabi_memclr                                                    
+00009bf1  __aeabi_memclr4                                                   
+00009bf1  __aeabi_memclr8                                                   
+00009bf3  __aeabi_memset                                                    
+00009bf3  __aeabi_memset4                                                   
+00009bf3  __aeabi_memset8                                                   
+00009bf9  memset                                                            
+00009c6b  __TI_decompress_lzss                                              
+00009cd5  atoi                                                              
+00009d21  __aeabi_d2iz                                                      
+00009d69  __TI_auto_init_nobinit_nopinit                                    
+00009dad  __aeabi_d2uiz                                                     
+00009df1  __aeabi_f2d                                                       
+00009e29  _c_int00_noargs                                                   
+00009e5d  __aeabi_i2d                                                       
+00009e8b  __aeabi_ui2d                                                      
+00009eab  strcat                                                            
+00009ec9  copysign                                                          
+00009ec9  copysignl                                                         
+00009ee3  strcmp                                                            
+00009efb  strcpy                                                            
+00009f0f  strlen                                                            
+00009f23  atof                                                              
+00009f35  __TI_decompress_none                                              
+00009f43  __TI_zero_init                                                    
+00009f4f  ResetISR                                                          
+00009f5d  __aeabi_errno_addr                                                
+00009f65  _system_pre_init                                                  
+00009f69  C$$EXIT                                                           
+00009f69  abort                                                             
+0000a0c8  _ctypes_                                                          
+0000a340  ulMaxSyscallInterruptPriority                                     
+0000a370  __TI_Handler_Table_Base                                           
+0000a37c  __TI_Handler_Table_Limit                                          
+0000a388  __TI_CINIT_Base                                                   
+0000a398  __TI_CINIT_Limit                                                  
+20000000  __start___llvm_prf_cnts                                           
+20000000  __stop___llvm_prf_cnts                                            
+20004e20  DATA                                                              
+200052a8  APs                                                               
+2000549c  Ultrasonic_readings                                               
+20005540  GPS_handle                                                        
+20005546  time1                                                             
+20005548  time2                                                             
+20005550  FDATA                                                             
+200061a0  Applications_data                                                 
+20006420  frame                                                             
+2000651a  THIS_CAR_DATA                                                     
+20006554  pxCurrentTCB                                                      
+20006589  BSW_state                                                         
+2000658a  EEBL_state                                                        
+2000658b  potentail_EEBL_state                                              
+2000658c  DNPW_state                                                        
+2000658d  General_warning_state                                             
+2000658e  x                                                                 
+20006590  Reading                                                           
+20006594  Trigger                                                           
+20006598  Ultrasonic_1_ReadingHandle                                        
+2000659c  WIFI_Frame_Send_handle                                            
+200065a0  Applications_Detection_handle                                     
+200065a4  Bluetooth_reading                                                 
+200065a5  WIFI_Frame_Send_checker                                           
+200065a6  WIFI_Frame_Send_Counter                                           
+200065a7  Applications_Detection_checker                                    
+200065aa  WIFI_LISTING                                                      
+200065ab  print                                                             
+200065b8  us_order                                                          
+200065c4  comma_Location                                                    
+200065d8  pulse                                                             
+200065dc  Echo                                                              
+200065e4  errno                                                             
+200065e8  __stack                                                           
+200067e8  __STACK_END                                                       
+200067e8  __STACK_TOP                                                       
+ffffffff  __TI_pprof_out_hndl                                               
+ffffffff  __TI_prof_data_size                                               
+ffffffff  __TI_prof_data_start                                              
+ffffffff  __binit__                                                         
+ffffffff  __c_args__                                                        
+ffffffff  binit                                                             
+UNDEFED   __mpu_init                                                        
+UNDEFED   _system_post_cinit                                                
+
+[294 symbols]

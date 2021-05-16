@@ -96,3 +96,13 @@
 
 ![](./files/hc.jpg)
 
+---
+
+## Hardware
+
+---
+
+![Schematic](./files/sch.png)
+
+![Layers](./files/Topbot.png)
+
