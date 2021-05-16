@@ -49,20 +49,19 @@
 
 1. EMERGENCY ELECTRONIC BRAKE LIGHTS (**EEBL**)
 
-> when there is a hard braking vehicle in the pass ahead , three vehicles are traveling in the same lane you are driving the last vehicle and you can’t see the first vehicle because it’s been blocked by the car in front of you ,unexpectedly the vehicle slams on its brakes ,duo to v2v communication the car can produce a waning of the braking car ahead.
+when there is a hard braking vehicle in the pass ahead , three vehicles are traveling in the same lane you are driving the last vehicle and you can’t see the first vehicle because it’s been blocked by the car in front of you ,unexpectedly the vehicle slams on its brakes ,duo to v2v communication the car can produce a waning of the braking car ahead.
 
 ![](./files/EEBL.gif)
 
 2. BLIND SPOT WARNING(**BSW**)
 
-> when there is a car that may not be visible to the car driver, because of v2v communication a warning
-> message is issued to make you aware of the presence of this vehicle , should you attempt to lane change this warning message will tell you that it’s not safe to lane change.
+when there is a car that may not be visible to the car driver, because of v2v communication a warning message is issued to make you aware of the presence of this vehicle , should you attempt to lane change this warning message will tell you that it’s not safe to lane change.
 
 ![](./files/BSW.gif)
 
 3. DO NOT PASS WARNING(**DNPW**)
 
-> a safety application is intended to let the driver know that it’s not safe to attempt to pass a slower moving vehicle because of incoming traffic in the passing zone, if a vehicle is detected in the passing done a warning message is provided letting you know that the passing situation is potentially unsafe.
+a safety application is intended to let the driver know that it’s not safe to attempt to pass a slower moving vehicle because of incoming traffic in the passing zone, if a vehicle is detected in the passing done a warning message is provided letting you know that the passing situation is potentially unsafe.
 
 ![](./files/DNPW.gif)
 
